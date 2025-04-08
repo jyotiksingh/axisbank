@@ -2,3 +2,11 @@
 host: all
 Gather_fact: yes
 become: true
+tasks: 
+  - name: copy file
+    copy: src=/etc/ansible/host
+          dest=/tmp/
+          owner=root
+          group=root
+          mode=0666
+...
